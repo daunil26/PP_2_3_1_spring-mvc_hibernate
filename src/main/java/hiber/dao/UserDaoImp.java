@@ -13,8 +13,13 @@ import java.util.List;
 @Repository
 public class UserDaoImp implements UserDao {
 
-   @Autowired
+
    private EntityManagerFactory entityManagerFactory;
+
+   @Autowired
+   public UserDaoImp(EntityManagerFactory entityManagerFactory) {
+      this.entityManagerFactory = entityManagerFactory;
+   }
 
    @Override
    public void add(User user) {

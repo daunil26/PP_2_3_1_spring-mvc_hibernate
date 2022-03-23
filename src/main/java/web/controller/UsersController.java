@@ -11,6 +11,7 @@ import hiber.model.User;
 import java.util.List;
 
 @Controller
+@RequestMapping("/users")
 public class UsersController {
 
     private final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PersistenceJPAConfig.class);
